@@ -1,22 +1,28 @@
-import { Router, Route } from 'react-router-dom';
-import Header from './components/Header';
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { green, lightGreen } from '@mui/material/colors';
+import Login from './screens/Login';
+import CardBuilder from './components/CardBuilder';
 
 
 
-function App() {
+const theme = createTheme({
+   palette: {
+     primary: {
+        main: '#000000',
+     },
+     secondary: lightGreen
+   },
+});
+
+const App = () => {
   return (
-      <div className="App">
-        <Header/>
-        {/* <Router>
-          <Route path="/" element={<HomePage/>}/>
-          <Route path="/about" element={<x/>}/>
-          <Route path="/education" element={<y/>}/>
-          <Route path="/technicalskills" element={<z/>}/>
-          <Route path="/experience" element={<NotFound/>}/>
-          <Route path="/projects" element={<null/>}/>
-          <Route path="/professionalleadership" element={<null/>}/>
-        </Router> */}
+      <div className="App" >
+        <ThemeProvider theme={theme}>
+          <Login/>
+          {/* <CardBuilder/> */}
+        </ThemeProvider>
       </div>
    
   );
