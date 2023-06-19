@@ -7,12 +7,17 @@ import { Button } from "@mui/material";
 import App from "../App";
 
 
-const pages = ['Products', 'Support', 'About Us'];
+const pages = [
+                'Products' , 
+                'Support', 
+                'About Us'
+            ];
+const signIn = ['Sign In'];
 
 const Nav = () => {
-    return(
+    return (
         <AppBar>
-            <Container 
+            <Container
                 maxWidth="xl"
             >
                 <Toolbar disableGutters>
@@ -23,7 +28,7 @@ const Nav = () => {
                         href="/"
                         sx={{
                             fontFamily: 'Avenir',
-                            fontWeight: 700,
+                            fontWeight: 900,
                             letterSpacing: '.1rem',
                             color: '#20B278',
                             textDecoration: 'none',
@@ -35,13 +40,52 @@ const Nav = () => {
                         sx={{
                             flexGrow: 1,
                             display: "flex",
-                            paddingLeft: '50px'
+                            paddingLeft: '50px',
+
 
                         }}
                     >
                         {pages.map((page) => (
-                            <MenuItem key={page}>
-                                <Typography textAlign="center">{page}</Typography>
+                            <MenuItem
+                                key={page}
+
+                            >
+                                <Typography
+                                    textAlign="center"
+                                    sx={{
+                                        '&:hover': {
+                                            color: "#20B278"
+                                        }
+                                    }}
+
+                                >
+                                    {page}
+                                </Typography>
+                            </MenuItem>
+                        ))}
+
+                    </Box>
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: "flex",
+                            paddingLeft: '200px'
+
+                        }}
+                    >
+                        {signIn.map((theSignIn) => (
+                            <MenuItem
+                                key={theSignIn}
+                            >
+                                <Typography
+                                    sx={{
+                                        '&:hover': {
+                                            color: "#20B278",
+                                        }
+                                    }}
+                                >
+                                    {theSignIn}
+                                </Typography>
                             </MenuItem>
                         ))}
 
@@ -52,4 +96,4 @@ const Nav = () => {
     )
 }
 
-export default Nav
+export default Nav;
