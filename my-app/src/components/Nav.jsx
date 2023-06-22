@@ -37,13 +37,13 @@ const Nav = () => {
                         href="/"
                         sx={{
                             fontFamily: 'Avenir',
-                            fontWeight: 900,
+                            fontWeight: 800,
                             letterSpacing: '.1rem',
                             color: '#20B278',
                             textDecoration: 'none',
                         }}
                     >
-                        Trail
+                        Nest
                     </Typography>
                     <Box
                         sx={{

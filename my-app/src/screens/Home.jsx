@@ -4,10 +4,6 @@ import { TextField } from "@mui/material";
 import { styled } from "@mui/material"
 
 
-const StyledTextField = styled(TextField)(() => ({
-    
-
-}));
 const Home = () => {
 
     return (
@@ -26,17 +22,6 @@ const Home = () => {
                 >
                     Create Your Account
                 </Typography>
-            </Box>
-            <div>
-            </div>
-            <Box
-                component="form"
-                sx={{
-                    '& > :not(style)': { m: 1, width: '25ch' },
-                }}
-                noValidate
-                autoComplete="off"
-            >
             </Box>
         </Container>
 
