@@ -43,7 +43,7 @@ const Nav = () => {
                             textDecoration: 'none',
                         }}
                     >
-                        Nest
+                        Trail
                     </Typography>
                     <Box
                         sx={{
