@@ -3,7 +3,8 @@ import { AppBar, MenuItem, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
-
+import { Link } from 'react-router-dom';
+import { styled } from "@mui/material";
 
 
 const pages = [
@@ -12,6 +13,15 @@ const pages = [
     'About Us'
 ];
 const signIn = ['Sign In'];
+const StyledLink = styled(Link)(() => ({
+    color: 'white',
+    '&:hover': {
+        color: '#20B278'
+    },
+    textDecoration: 'none'
+
+}));
+
 
 const Nav = () => {
     return (
@@ -27,7 +37,7 @@ const Nav = () => {
                         href="/"
                         sx={{
                             fontFamily: 'Avenir',
-                            fontWeight: 900,
+                            fontWeight: 800,
                             letterSpacing: '.1rem',
                             color: '#20B278',
                             textDecoration: 'none',
@@ -47,22 +57,10 @@ const Nav = () => {
                         {pages.map((page) => (
                             <MenuItem
                                 key={page}
-
                             >
-                                <Typography
-                                    textAlign="center"
-                                    sx={{
-                                        '&:hover': {
-                                            color: "#20B278"
-                                        }
-                                    }}
-
-                                >
-                                    {page}
-                                </Typography>
+                                <StyledLink to={`/${page.replace(/\s+/g, '-').toLowerCase()}`}>{page}</StyledLink>
                             </MenuItem>
                         ))}
-
                     </Box>
                     <Box
                         sx={{

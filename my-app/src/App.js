@@ -7,7 +7,7 @@ import Home from './screens/Home';
 import About from './screens/About';
 import Support from './screens/Support';
 import Login from './screens/Login';
-
+import Products from './screens/Products';
 
 
 const theme = createTheme({
@@ -17,6 +17,8 @@ const theme = createTheme({
      },
      secondary: lightGreen
    },
+
+
 });
 
 const App = () => {
@@ -30,6 +32,7 @@ const App = () => {
             <Route path='/about' element={<About/>}/>
             <Route path='/support' element={<Support/>}/>
             <Route path='/login' element={<Login/>}/>
+            <Route path='/products' element={<Products/>}/>
           </Routes>
         </ThemeProvider>
       </div>
