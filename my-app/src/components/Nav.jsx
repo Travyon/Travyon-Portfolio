@@ -78,7 +78,8 @@ const Nav = () => {
                                     sx={{
                                         '&:hover': {
                                             color: "#20B278",
-                                        }
+                                        },
+                                        marginLeft: 52
                                     }}
                                 >
                                     {theSignIn}

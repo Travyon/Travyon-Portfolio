@@ -7,94 +7,92 @@ import { styled } from "@mui/material"
 const Home = () => {
 
     return (
-    
-        <Box>
-            <Container>
-                <Box>
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        sx={{
-                            color: 'white',
-                            textAlign: 'center',
-                            marginTop: '200px',
-                            fontFamily: 'Avenir',
-                            display: "flex"
-                        }}
-                    >
-                        Create Your Account
-                    </Typography>
-                </Box>
-                <Box
-                    component="form"
-                    sx={{
-                        p: 2,
-                        marginLeft: 53,
-                        '& > :not(style)': { m: 1, width: '25ch' },
-                        position: 'absolute'
-                    }}
-                    noValidate
-                    autoComplete="off"
-                >
 
-                    <TextField
-                        id="filled-basic"
-                        label="Username"
-                        variant="filled"
-                        sx={{
-                            background: 'rgba(255, 255, 255, 0.5)',
-                            borderRadius: 1
-                        }}
-                    />
-                </Box>
-                <Box
-                    component="form"
+
+        <Container>
+            <Box>
+                <Typography
+                    variant="h5"
+                    noWrap
                     sx={{
-                        p: 2,
-                        marginLeft: 53,
-                        marginTop: -4,
-                        '& > :not(style)': { m: 1, width: '25ch' },
+                        color: 'white',
+                        marginLeft: 56.4,
+                        marginTop: '200px',
+                        fontFamily: 'Avenir',
+                        display: "flex",
+                        flexDirection: 'column',
+                        lineHeight: '22px',
                     }}
                 >
-                    <TextField
-                        id="filled-basic"
-                        label="Password"
-                        variant="filled"
-                        sx={{
-                            borderRadius: 1.5,
-                            opacity: 1,
-                            background: 'rgba(255, 255, 255, 0.5)',
-                        }}
-                    />
-                </Box>
-                <Box>
-                    <Button
-                        variant="outlined"
-                        sx={{
-                            backgroundColor: '#20B278',
-                            marginLeft: 56,
-                            paddingRight: 8,
-                            paddingLeft: 14,
-                            "&:hover": {
-                                backgroundColor: 'grey'
-                            },
-                        }}
-                    >
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            sx={{
-                                paddingLeft: 1,
-                                fontFamily: 'Avenir',
-                                color: 'black'
-                            }}
-                        >
-                            Submit
-                        </Typography>
-                    </Button>
-                </Box>
-            </Container>
-        </Box>
+                    Create Your Account
+                </Typography>
+            </Box>
+            <Box
+                component="form"
+                sx={{
+                    p: 2,
+                    marginLeft: 52,
+                    '& > :not(style)': { m: 1, width: '25ch' },
+                    margingTop: 25,
+
+                }}
+                noValidate
+                autoComplete="off"
+            >
+
+                <TextField
+                    id="filled-basic"
+                    label="Username"
+                    variant="filled"
+                    sx={{
+                        background: 'rgba(217, 217, 217, 0.38)',
+                        borderRadius: 1,
+                    }}
+                />
+            </Box>
+            <Box
+                component="form"
+                sx={{
+                    p: 2,
+                    width: '442px',
+                    height: '75px',
+                    flexShrink: '0',
+                    marginLeft: 52,
+                    marginTop: -4,
+                    '& > :not(style)': { m: 1, width: '25ch' },
+                }}
+            >
+                <TextField
+                    id="filled-basic"
+                    label="Password"
+                    variant="filled"
+                    sx={{
+                        borderRadius: 1.5,
+                        opacity: 1,
+                        background: 'rgba(217, 217, 217, 0.38)',
+                    }}
+                />
+            </Box>
+            <Box>
+                <Button
+                    variant="outlined"
+                    sx={{
+                        backgroundColor: '#20B278',
+                        width: '250px',
+                        height: '45px',
+                        flexShrink: '0',
+                        marginLeft: 55,
+                        "&:hover": {
+                            backgroundColor: 'grey'
+                        },
+                        alignItems: 'center'
+                    }}
+                >
+                    Submit
+                </Button>
+            </Box>
+        </Container>
+
     )
 }
 export default Home;
